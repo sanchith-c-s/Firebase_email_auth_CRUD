@@ -1,5 +1,6 @@
 
 import 'package:demo/functions/authFunctions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class EmailAuth extends StatefulWidget {
@@ -21,6 +22,7 @@ class _EmailAuthState extends State<EmailAuth> {
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: Text('Email/Pass Auth'),
+        
       ),
       body: Form(
         key: _formkey,
