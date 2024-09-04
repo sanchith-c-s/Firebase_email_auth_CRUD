@@ -1,5 +1,6 @@
 import 'package:demo/databaseOption.dart';
 import 'package:demo/email_auth.dart';
+import 'package:demo/nav.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+        // home: Navbar(),
       home: StreamBuilder(stream: FirebaseAuth.instance.authStateChanges(), builder: (context,snapshot){
         if(snapshot.hasData){
           return Databaseoption();

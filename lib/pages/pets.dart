@@ -25,11 +25,14 @@ class _PetsListState extends State<PetsList> {
           }else{
             final petDoc = petSnapshot.data!.docs;
             return ListView.builder(
-              itemCount: 2,
+              itemCount: petDoc.length,
               itemBuilder: (context,index){
-              return ListTile(
-                title: Text(petDoc[index]['name']),
-                subtitle: Text(petDoc[index]['animal']),
+              return Card(
+                elevation: 10,
+                child: ListTile(
+                  title: Text(petDoc[index]['name']),
+                  subtitle: Text(petDoc[index]['animal']),
+                ),
               );
             });
           }
